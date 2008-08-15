@@ -1,0 +1,9 @@
+jquery-checkbox-edit
+
+I made this for large forms where we had multiple blocks with options to select, but a multi-select wasn't the correct metaphor.
+
+I have a rails helper i am working on also "checkboxes_for_collection" (name tbd)
+
+enjoy
+
+tjh
