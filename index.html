@@ -6,44 +6,30 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <!-- include library -->
-<script src="chejqboxes.js" type="text/javascript" charset="utf-8"></script>
+<script src="jquery-checkbox-edit.js" type="text/javascript"></script>
 </head>
 <style type="text/css" media="screen">
   /* style for done button */
-  .chejqboxes-done { display:none;}
+  .jq-checkboxes-done { display:none;}
 </style> 
-<script type="text/javascript" charset="utf-8">
 
-  $(document).ready(function(){
-    chejqboxes_init()
-    $('.chejqboxes').after('<div class="chejqboxes-done">done</div>');
-    $('.chejqboxes-done').bind('click',chejqboxes_init);
-  });
-  function chejqboxes_init(){
-    $('.chejqboxes-done').hide();
-    txtCont = $('.chejqboxes').css('border','solid 1px #ccc'); 
-    $('.chejqboxes > *').wrapAll('<div class="chejqboxes-frm-elements">');
-    $('.chejqboxes-frm-elements').hide().before('<div class="chejqboxes-text-elements"></div>');
-    labelsForChecked = $('.chejqboxes > *').find('input[@type="checkbox"][checked]').next();
-    var out='';
-    jQuery.each(labelsForChecked,function(i,val){out+= jQuery(val).text() + "<br>"})
-    $('.chejqboxes-text-elements').show('fast').html(out).bind('click',function(e){
-      $('.chejqboxes-text-elements').hide('fast');
-      $('.chejqboxes-frm-elements').show('fast');
-      $('.chejqboxes-done').show();
-    });
-  }
-</script>
 
 <body id="index" onload="">
- 
- <div class="chejqboxes">
+<fieldset>
+  <legend>Choose your color choices</legend>
+ <div class="jq-checkboxes">
       <input type="checkbox" name="cb_name" value="1" id="opt1"><label for="opt1">Blue</label>
       <input type="checkbox" name="cb_name" value="2" id="opt2"><label for="opt2">Red</label>
       <input type="checkbox" checked="true" name="cb_name" value="3" id="opt3"><label for="opt3">Green</label>
       <input type="checkbox" name="cb_name" value="4" id="opt4"><label for="opt4">Yellow</label>
       <input type="checkbox" checked="true" name="cb_name" value="5" id="opt5"><label for="opt5">Purple</label>
+      <br>
+      <input type="checkbox" name="cb_name" value="10" id="opt10"><label for="opt10">Orange</label>
+      <input type="checkbox" name="cb_name" value="20" id="opt20"><label for="opt20">Pink</label>
+      <input type="checkbox" checked="true" name="cb_name" value="30" id="opt30"><label for="opt30">Brown</label>
+      <input type="checkbox" name="cb_name" value="40" id="opt40"><label for="opt40">Black</label>
+      <input type="checkbox" checked="true" name="cb_name" value="50" id="opt50"><label for="opt50">White</label>
  </div>
-  
+</fieldset>  
 </body>
 </html>
