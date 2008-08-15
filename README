@@ -2,6 +2,11 @@ jquery-checkbox-edit
 
 I made this for large forms where we had multiple blocks with options to select, but a multi-select wasn't the correct metaphor.
 
+usage: put your checkboxes with labels for each in a div with a class jq-checkboxes
+let'r rip                                                     
+
+
+
 I have a rails helper i am working on also "checkboxes_for_collection" (name tbd)
 
 enjoy
